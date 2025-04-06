@@ -86,9 +86,12 @@ struct TriangularLight {
 std::variant<AmbientLight, PointLight, TriangularLight> parse(
     const pugi::xml_node& node) {
   const std::string type = node.name();
-  if (type == "ambientLight") return AmbientLight::parse(node);
-  if (type == "pointlight") return PointLight::parse(node);
-  if (type == "triangularlight") return TriangularLight::parse(node);
+  if (type == "ambientLight")
+    return AmbientLight::parse(node);
+  if (type == "pointlight")
+    return PointLight::parse(node);
+  if (type == "triangularlight")
+    return TriangularLight::parse(node);
 
   throw "Unknown Type";
 }
@@ -112,7 +115,7 @@ struct Material {
   }
 };
 
-struct Vertex
+// struct Vertex
 
 // struct Mesh {
 //   int materialId;

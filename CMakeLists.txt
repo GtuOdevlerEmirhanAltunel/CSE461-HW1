@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Enable OpenMP for multithreading
 find_package(OpenMP)
 
-if(OpenMP_CXX_FOUND)
-	message(STATUS "OpenMP found. Enabling multithreading.")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-endif()
+# if(OpenMP_CXX_FOUND)
+# message(STATUS "OpenMP found. Enabling multithreading.")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+# endif()
 
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/inc)
@@ -22,8 +22,8 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 # Add executable
 add_executable(RayTracer ${SOURCES})
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/pugixml)
-target_link_libraries(RayTracer pugixml)
+# add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/pugixml)
+# target_link_libraries(RayTracer pugixml)
 
 # Set optimization flags
 if(CMAKE_BUILD_TYPE MATCHES Release)

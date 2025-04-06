@@ -1,38 +1,30 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include "AmbientLight.hpp"
+#include "Cube.hpp"
+#include "DirectionalLight.hpp"
+#include "PointLight.hpp"
+#include "Scene.hpp"
+#include "Sphere.hpp"
+#include "Surface.hpp"
 
 int main() {
-  // pugi::xml_document doc;
-  // if (!doc.load_file("./scene.xml")) {
-  //   std::cerr << "Error: Cannot load XML file.\n";
-  //   return 1;
-  // }
+  Scene scene;
+  Camera camera({0, 0, 3}, {0, 0.2, -1}, 90.0f, 800, 600);
 
-  // Camera camera;
-  // std::vector<Light> lights;
-  // std::vector<Material> materials;
-  // std::vector<Mesh> meshes;
+  scene.addObject(
+      std::make_shared<Surface>(Vec3{0, 3, 0}, Vec3{0, 1, 0}, WHITE));
+  // scene.addObject(std::make_shared<Sphere>(Vec3{2, 2, -7}, 0.5f, WHITE));
+  // scene.addObject(std::make_shared<Sphere>(Vec3{1, -5, -7}, 0.5f, YELLOW));
+  scene.addObject(std::make_shared<Cube>(
+      Vec3{1, 2, -7}, Vec3{1, 0, 0}, Vec3{0, 0.5, 0}, Vec3{0, 0, 0.5}, YELLOW));
+  scene.addObject(std::make_shared<Cube>(
+      Vec3{1, 2, -9}, Vec3{1, 0, 0}, Vec3{0, 0.5, 0}, Vec3{0, 0, 0.5}, WHITE));
 
-  // pugi::xml_node root = doc.child("scene");
-  // if (!root) {
-  //   std::cerr << "Error: Invalid XML structure (no <scene> root).\n";
-  //   return 1;
-  // }
+  // scene.addLight(std::make_shared<PointLight>(Vec3{2, 0, -5}, BLUE, 0.6f));
+  // scene.addLight(std::make_shared<PointLight>(Vec3{-2, 0, -5}, RED, 0.6f));
+  scene.addLight(
+      std::make_shared<DirectionalLight>(Vec3{0, 1, 0}, WHITE, 0.5f));
+  scene.addLight(std::make_shared<AmbientLight>(WHITE, 0.2f));
 
-  // parseCamera(root.child("camera"), camera);
-  // parseLights(root.child("lights"), lights);
-  // parseMaterials(root.child("materials"), materials);
-  // parseMeshes(root.child("objects"), meshes);
-
-  // // Print extracted data
-  // std::cout << "Camera Position: " << camera.position.x << " "
-  //           << camera.position.y << " " << camera.position.z << "\n";
-  // std::cout << "Resolution: " << camera.imageResolution[0] << "x"
-  //           << camera.imageResolution[1] << "\n";
-  // std::cout << "Lights Count: " << lights.size() << "\n";
-  // std::cout << "Materials Count: " << materials.size() << "\n";
-  // std::cout << "Meshes Count: " << meshes.size() << "\n";
-
+  scene.render(camera).save("output.ppm");
   return 0;
 }

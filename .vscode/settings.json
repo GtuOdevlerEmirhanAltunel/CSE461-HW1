@@ -83,7 +83,13 @@
     "cinttypes": "cpp",
     "typeinfo": "cpp",
     "valarray": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "complex": "cpp",
+    "hash_map": "cpp",
+    "hash_set": "cpp",
+    "future": "cpp",
+    "shared_mutex": "cpp",
+    "typeindex": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $workspaceRoot/assets && $workspaceRoot/build/RayTracer"
