@@ -5,16 +5,12 @@
 
 class PointLight : public Light {
  public:
-  PointLight(const Vec3 &position, const Pixel &color, float intensity)
-      : Light(Light::Type::POINT),
-        position(position),
-        color(color),
-        intensity(intensity) {
+  PointLight(const Vec3 &position, const Vec3 &intensity)
+      : Light(Light::Type::POINT), position(position), intensity(intensity) {
   }
 
   Vec3 position;
-  Pixel color;
-  float intensity;
+  Vec3 intensity;
 };
 
 #endif /* INC_POINTLIGHT */

@@ -3,7 +3,7 @@
 #include <limits>
 
 Cube::Cube(const Vec3 &position, const Vec3 &direction1, const Vec3 &direction2,
-           const Vec3 &direction3, const Pixel &color)
+           const Vec3 &direction3, const Vec3 &color)
     : faces({Rectangle(position, direction1, direction2, color),
              Rectangle(position, direction1, direction3, color),
              Rectangle(position, direction2, direction3, color),
@@ -12,7 +12,7 @@ Cube::Cube(const Vec3 &position, const Vec3 &direction1, const Vec3 &direction2,
              Rectangle(position + direction3, direction1, direction2, color)}) {
 }
 
-bool Cube::intersect(const Ray &ray, float &t, Pixel &color,
+bool Cube::intersect(const Ray &ray, float &t, Vec3 &color,
                      Vec3 &surfaceNormal) const {
   bool hit = false;
   float closest_t = std::numeric_limits<float>::max();

@@ -1,12 +1,12 @@
 #ifndef INC_SCENEOBJECT
 #define INC_SCENEOBJECT
 
-#include "Pixel.hpp"
 #include "Ray.hpp"
+#include "Vector.hpp"
 
 class SceneObject {
  public:
-  virtual bool intersect(const Ray &ray, float &t, Pixel &color,
+  virtual bool intersect(const Ray &ray, float &t, Vec3 &color,
                          Vec3 &surfaceNormal) const = 0;
 };
 

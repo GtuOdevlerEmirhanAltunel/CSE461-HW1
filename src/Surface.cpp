@@ -1,10 +1,10 @@
 #include "Surface.hpp"
 
-Surface::Surface(const Vec3 &position, const Vec3 &normal, const Pixel &color)
+Surface::Surface(const Vec3 &position, const Vec3 &normal, const Vec3 &color)
     : position(position), normal(normal), color(color) {
 }
 
-bool Surface::intersect(const Ray &ray, float &t, Pixel &color,
+bool Surface::intersect(const Ray &ray, float &t, Vec3 &color,
                         Vec3 &surfaceNormal) const {
   // t = (a - o) . n / (d . n)
   float denom = normal.dot(ray.direction);

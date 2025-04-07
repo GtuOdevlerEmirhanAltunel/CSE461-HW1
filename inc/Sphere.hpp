@@ -5,14 +5,14 @@
 
 class Sphere : public SceneObject {
  public:
-  Sphere(const Vec3 &center, float radius, const Pixel &color);
-  bool intersect(const Ray &ray, float &t, Pixel &color,
+  Sphere(const Vec3 &center, float radius, const Vec3 &color);
+  bool intersect(const Ray &ray, float &t, Vec3 &color,
                  Vec3 &surfaceNormal) const override;
 
  private:
   Vec3 center;
   float radius;
-  Pixel color;
+  Vec3 color;
 };
 
 #endif /* INC_SPHERE */

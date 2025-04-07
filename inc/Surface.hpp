@@ -5,15 +5,15 @@
 
 class Surface : public SceneObject {
  public:
-  Surface(const Vec3 &position, const Vec3 &normal, const Pixel &color);
+  Surface(const Vec3 &position, const Vec3 &normal, const Vec3 &color);
 
-  bool intersect(const Ray &ray, float &t, Pixel &color,
+  bool intersect(const Ray &ray, float &t, Vec3 &color,
                  Vec3 &surfaceNormal) const override;
 
  protected:
   Vec3 position;
   Vec3 normal;
-  Pixel color;
+  Vec3 color;
 };
 
 #endif /* INC_SURFACE */

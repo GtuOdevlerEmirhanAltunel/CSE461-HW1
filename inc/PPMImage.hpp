@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "Pixel.hpp"
+#include "Vector.hpp"
 
 struct PPMImage {
   PPMImage(int width, int height);
@@ -12,14 +12,14 @@ struct PPMImage {
 
   ~PPMImage();
 
-  void setPixel(int x, int y, Pixel pixel);
+  void setVec3(int x, int y, Vec3 Vec3);
 
   void save(const std::string &filename);
 
   int width;
   int height;
 
-  Pixel *pixels;
+  Vec3 *Vec3s;
 };
 
 #endif /* INC_PPMIMAGE */

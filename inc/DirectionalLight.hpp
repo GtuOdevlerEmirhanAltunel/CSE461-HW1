@@ -5,16 +5,14 @@
 
 class DirectionalLight : public Light {
  public:
-  DirectionalLight(const Vec3 &direction, const Pixel &color, float intensity)
+  DirectionalLight(Vec3 direction, Vec3 intensity)
       : Light(Light::Type::DIRECTIONAL),
         direction(direction),
-        color(color),
         intensity(intensity) {
   }
 
   Vec3 direction;
-  Pixel color;
-  float intensity;
+  Vec3 intensity;
 };
 
 #endif /* INC_DIRECTIONALLIGHT */

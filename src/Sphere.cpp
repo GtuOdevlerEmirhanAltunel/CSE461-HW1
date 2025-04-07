@@ -2,11 +2,11 @@
 
 #include <cmath>
 
-Sphere::Sphere(const Vec3 &center, float radius, const Pixel &color)
+Sphere::Sphere(const Vec3 &center, float radius, const Vec3 &color)
     : center(center), radius(radius), color(color) {
 }
 
-bool Sphere::intersect(const Ray &ray, float &t, Pixel &color,
+bool Sphere::intersect(const Ray &ray, float &t, Vec3 &color,
                        Vec3 &surfaceNormal) const {
   // d^2 * t^2 + 2 * d * oc * t + oc^2 - r^2 = 0
   Vec3 oc = ray.origin - center;

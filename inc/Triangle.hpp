@@ -6,8 +6,8 @@
 
 class Triangle : public Surface {
  public:
-  Triangle(const Vec3 &v0, const Vec3 &v1, const Vec3 &v2, const Pixel &color);
-  bool intersect(const Ray &ray, float &t, Pixel &color,
+  Triangle(Vec3 v0, Vec3 v1, Vec3 v2, const Vec3 &color);
+  bool intersect(const Ray &ray, float &t, Vec3 &color,
                  Vec3 &surfaceNormal) const override;
 
  protected:

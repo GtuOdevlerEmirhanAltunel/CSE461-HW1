@@ -2,8 +2,7 @@
 
 #include <iostream>
 
-Triangle::Triangle(const Vec3 &v0, const Vec3 &v1, const Vec3 &v2,
-                   const Pixel &color)
+Triangle::Triangle(Vec3 v0, Vec3 v1, Vec3 v2, const Vec3 &color)
     : Surface(v0, (v0 - v1).cross(v2 - v1), color), v0(v0), v1(v1), v2(v2) {
 }
 
@@ -14,7 +13,7 @@ static bool sameSide(const Vec3 &p1, const Vec3 &p2, const Vec3 &a,
   return cp1.dot(cp2) >= 0;
 }
 
-bool Triangle::intersect(const Ray &ray, float &t, Pixel &color,
+bool Triangle::intersect(const Ray &ray, float &t, Vec3 &color,
                          Vec3 &surfaceNormal) const {
   Vec3 surfaceNormal_temp;
   float t_temp;

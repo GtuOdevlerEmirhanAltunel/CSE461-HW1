@@ -5,12 +5,11 @@
 
 class AmbientLight : public Light {
  public:
-  AmbientLight(const Pixel &color, float intensity)
-      : Light(Light::Type::AMBIENT), color(color), intensity(intensity) {
+  AmbientLight(Vec3 intensity)
+      : Light(Light::Type::AMBIENT), intensity(intensity) {
   }
 
-  Pixel color;
-  float intensity;
+  Vec3 intensity;
 };
 
 #endif /* INC_AMBIENTLIGHT */

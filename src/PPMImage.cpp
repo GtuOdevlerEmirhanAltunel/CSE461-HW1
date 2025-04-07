@@ -3,17 +3,17 @@
 #include <fstream>
 
 PPMImage::PPMImage(int width, int height) : width(width), height(height) {
-  pixels = new Pixel[width * height];
+  Vec3s = new Vec3[width * height];
 }
 
 PPMImage PPMImage::operator=(const PPMImage &other) {
   if (this != &other) {
-    delete[] pixels;
+    delete[] Vec3s;
     width = other.width;
     height = other.height;
-    pixels = new Pixel[width * height];
+    Vec3s = new Vec3[width * height];
     for (int i = 0; i < width * height; ++i) {
-      pixels[i] = other.pixels[i];
+      Vec3s[i] = other.Vec3s[i];
     }
   }
   return *this;
@@ -21,19 +21,19 @@ PPMImage PPMImage::operator=(const PPMImage &other) {
 
 PPMImage::PPMImage(const PPMImage &other)
     : width(other.width), height(other.height) {
-  pixels = new Pixel[width * height];
+  Vec3s = new Vec3[width * height];
   for (int i = 0; i < width * height; ++i) {
-    pixels[i] = other.pixels[i];
+    Vec3s[i] = other.Vec3s[i];
   }
 }
 
 PPMImage::~PPMImage() {
-  delete[] pixels;
+  delete[] Vec3s;
 }
 
-void PPMImage::setPixel(int x, int y, Pixel pixel) {
+void PPMImage::setVec3(int x, int y, Vec3 Vec3) {
   int index = (y * width + x);
-  pixels[index] = pixel;
+  Vec3s[index] = Vec3;
 }
 
 void PPMImage::save(const std::string &filename) {
@@ -42,6 +42,10 @@ void PPMImage::save(const std::string &filename) {
     throw std::runtime_error("Could not open file for writing");
   }
   file << "P6\n" << width << " " << height << "\n255\n";
-  file.write(reinterpret_cast<char *>(pixels), width * height * sizeof(Pixel));
+  for (int i = 0; i < width * height; ++i) {
+    file << static_cast<unsigned char>(Vec3s[i].x)
+         << static_cast<unsigned char>(Vec3s[i].y)
+         << static_cast<unsigned char>(Vec3s[i].z);
+  }
   file.close();
 }
