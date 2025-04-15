@@ -1,0 +1,57 @@
+<scene>
+	<maxraytracedepth>999</maxraytracedepth>
+	<backgroundColor>0 0 0</backgroundColor>
+	<camera>
+		<position>3 -3 5</position>
+		<gaze>-1 1 -1</gaze>
+		<up>0 0 -1</up>
+		<nearPlane> -1 1 -1 1 </nearPlane>
+		<neardistance>1</neardistance>
+		<imageresolution>1000 1000</imageresolution>
+	</camera>
+	<lights>
+		<pointlight id="3">
+			<position>-3 3 5 </position>
+			<intensity>1000 1000 1000</intensity>
+		</pointlight>
+	</lights>
+	<materials>
+		<material id="1">
+			<ambient>1 1 1</ambient>
+			<diffuse>1 1 1</diffuse>
+			<specular>1 1 1</specular>
+			<mirrorreflactance>0 0 0</mirrorreflactance>
+			<phongexponent>1</phongexponent>
+		</material>
+	</materials>
+	<vertexdata>
+		1 0 1.4142
+		0 1 1.4142
+		-1 0 1.4142
+		0 -1 1.4142
+		1 0 0
+		0 1 0
+		-1 0 0
+		0 -1 0
+	</vertexdata>
+	<objects>
+		<mesh id="1">
+			<materialid>1</materialid>
+			<faces>
+				0 1 2
+				0 2 3
+				7 4 0
+				7 0 3
+				4 5 1
+				4 1 0
+				5 6 2
+				5 2 1
+				3 2 6
+				3 6 7
+				6 5 4
+				6 4 7
+			</faces>
+		</mesh>
+	</objects>
+
+</scene>

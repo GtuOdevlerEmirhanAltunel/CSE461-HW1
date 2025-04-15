@@ -12,3 +12,5 @@ add_executable(RayTracer ${SOURCES})
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/pugixml)
 target_link_libraries(RayTracer pugixml)
+
+target_compile_options(RayTracer PRIVATE "-pthread")

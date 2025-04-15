@@ -1,5 +1,9 @@
 {
-  "c-cpp-flylint.cppcheck.suppressions": ["toomanyconfigs"],
+  "c-cpp-flylint.cppcheck.suppressions": [
+    "toomanyconfigs",
+    "unusedStructMember"
+  ],
+  "clang-tidy.blacklist": ["stb_image_write.h", "stb_image.h"],
   "files.associations": {
     "*.c": "c",
     "*.cpp": "cpp",
@@ -93,5 +97,10 @@
   },
   "code-runner.executorMap": {
     "cpp": "cd $workspaceRoot/assets && $workspaceRoot/build/RayTracer"
-  }
+  },
+  "c-cpp-flylint.excludeFromWorkspacePaths": [
+    "int/stb_image_write.h",
+    "int/stb_image.h",
+    "dependencies/"
+  ]
 }

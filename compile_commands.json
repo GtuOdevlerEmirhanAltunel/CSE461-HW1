@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Cube.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Cube.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Cube.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Cube.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/PPMImage.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/PPMImage.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/PPMImage.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/PPMImage.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Rectangle.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Rectangle.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Rectangle.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Rectangle.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Scene.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Scene.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Scene.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Scene.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Sphere.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Sphere.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Sphere.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Sphere.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Surface.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Surface.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Surface.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Surface.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Triangle.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Triangle.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Triangle.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Triangle.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/Vector.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/Vector.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/Vector.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/Vector.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -o CMakeFiles/RayTracer.dir/src/main.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/src/main.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/src/main.cpp",
+  "output": "CMakeFiles/RayTracer.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/demir/Documents/Projects/CSE461-HW1/build",
+  "command": "/usr/bin/g++ -I/home/demir/Documents/Projects/CSE461-HW1/inc -I/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src -g -std=gnu++17 -fPIC -o dependencies/pugixml/CMakeFiles/pugixml-static.dir/src/pugixml.cpp.o -c /home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src/pugixml.cpp",
+  "file": "/home/demir/Documents/Projects/CSE461-HW1/dependencies/pugixml/src/pugixml.cpp",
+  "output": "dependencies/pugixml/CMakeFiles/pugixml-static.dir/src/pugixml.cpp.o"
+}
+]
