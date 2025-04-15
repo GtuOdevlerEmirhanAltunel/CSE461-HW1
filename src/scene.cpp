@@ -428,9 +428,9 @@ bool Scene::_traceRay(const Ray& ray, Number& t, Vec3& color,
                           reflect(ray.direction, normal)};
     Vec3 reflectColor;
     Number reflectT;
-    bool reflectHit =
-        _traceRay(reflectRay, reflectT, reflectColor, reflectDepth + 1);
-    color += reflectColor * materialIt->mirror_reflectance;
+    _traceRay(reflectRay, reflectT, reflectColor, reflectDepth + 1);
+    color = color * (1.0f - materialIt->mirror_reflectance) +
+            reflectColor * materialIt->mirror_reflectance;
 
     auto barycentric =
         calculateBarycentric(ray.origin + ray.direction * (t - EPSILON),
@@ -447,7 +447,6 @@ bool Scene::_traceRay(const Ray& ray, Number& t, Vec3& color,
                                   [static_cast<size_t>(texCoord.u)];
     color = color * (1.0f - materialIt->texture_factor) +
             texColor * materialIt->texture_factor;
-
   } else {
     color = this->_background_color;
   }
@@ -471,8 +470,7 @@ Vec3 Scene::_calculateLighting(const Vec3& hitPoint, const Vec3& normal,
     bool isInShadow = _traceRayHelper(shadowRay, tShadow);
 
     if (!isInShadow) {
-      auto attenuation =
-          1.0f / (1.0f + 0.2f * lightDist + 0.2f * lightDist * lightDist);
+      auto attenuation = 1.0f;
       Number diffuseIntensity = std::max(dot(normal, lightDir), 0.0f);
       Vec3 diffuse =
           material.diffuse * diffuseIntensity * light->intensity * attenuation;

@@ -118,13 +118,13 @@ struct Image {
   }
 
   inline void setPixel(Index x, Index y, Vec3 color) {
+    color = color ^ 2.2f;
     if (color.x < 0) color.x = 0;
     if (color.x > 1.0f) color.x = 1.0f;
     if (color.y < 0) color.y = 0;
     if (color.y > 1.0f) color.y = 1.0f;
     if (color.z < 0) color.z = 0;
     if (color.z > 1.0f) color.z = 1.0f;
-    color = color ^ 2.2f;
     data[y * width + x][0] = static_cast<unsigned char>(color.x * 255);
     data[y * width + x][1] = static_cast<unsigned char>(color.y * 255);
     data[y * width + x][2] = static_cast<unsigned char>(color.z * 255);

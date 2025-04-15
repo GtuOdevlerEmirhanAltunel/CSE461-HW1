@@ -46,6 +46,10 @@ struct Vec3 {
   }
 };
 
+inline Vec3 operator-(Number scalar, const Vec3& v) {
+  return Vec3(scalar - v.x, scalar - v.y, scalar - v.z);
+}
+
 struct Vec2 {
   Number u;
   Number v;
